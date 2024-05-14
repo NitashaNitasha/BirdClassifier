@@ -1,4 +1,4 @@
-# dashboard library
+/# dashboard library
 import streamlit as st
 # ml library
 import tensorflow as tf
@@ -9,7 +9,7 @@ import numpy as np
 import pandas as pd
 
 # loading the model
-my_model = tf.keras.models.load_model('E:/app devlopment/BirdClassifier/my_model.h5')
+my_model = tf.keras.models.load_model('E:/app devlopment/BirdClassifier/models/my_model.h5')
 
 
 #  bird labels according to dataset
