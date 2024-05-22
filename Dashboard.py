@@ -14,6 +14,7 @@ my_model = tf.keras.models.load_model('./models/my_model.h5')
 
 #  bird labels according to dataset
 categories=['QUETZAL','CANARY','CROW','PINK ROBIN','PEACOCK','VIOLET BACKED STARLING','PUFFIN','FLAME BOWERBIRD','HAWFINCH','SNOWY OWL']
+Exp_life_span=['3-10','10-12','10-15','3-3.5','14-15','14-15','25','10-15','10','10-20']
 
 
 
@@ -31,7 +32,7 @@ def check_image(img):
     # Make predictions
     prediction = my_model.predict(img_array)
     predicted_class_index = tf.argmax(prediction, axis=1).numpy()[0]
-    return categories[predicted_class_index]
+    return categories[predicted_class_index],Exp_life_span[predicted_class_index]
 
 
 
@@ -57,5 +58,6 @@ if uploaded_file:
 
     # if classify button is clicked
     if is_clicked:
-
-        col1.metric(label="This Bird is classified as:", value=check_image(uploaded_file))
+        
+        col1.metric(label="This Bird is classified as:", value=check_image(uploaded_file)[0])
+        col2.metric(label="This Bird is classified as:", value=check_image(uploaded_file)[1])
