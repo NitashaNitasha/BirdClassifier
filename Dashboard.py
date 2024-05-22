@@ -60,4 +60,4 @@ if uploaded_file:
     if is_clicked:
         
         col1.metric(label="This Bird is classified as:", value=check_image(uploaded_file)[0])
-        col2.metric(label="Average Lifespan:", value=check_image(uploaded_file)[1]+" Years")
+        col1.metric(label="Average Lifespan:", value=check_image(uploaded_file)[1]+" Years")
