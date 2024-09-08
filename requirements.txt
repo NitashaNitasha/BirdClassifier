@@ -1,7 +1,8 @@
-streamlit
+matplotlib==3.8.2
+numpy==1.24.3
+pandas==2.2.2
+protobuf==5.28.0
+skimage==0.0
+streamlit==1.38.0
 tensorflow==2.16.1
-tensorflow-estimator==2.16.1
-tensorboard==2.15.2
-matplotlib
-scikit-image
-
+tensorflow_intel==2.16.1
