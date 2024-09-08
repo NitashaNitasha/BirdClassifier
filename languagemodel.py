@@ -4,7 +4,7 @@ from dotenv import load_dotenv
 
 #loading env variables
 load_dotenv()
-API_KEY = os.getenv('API_KEY')
+API_KEY = os.getenv('API_KEY') or st.secrets['API_KEY']
 
 
 # Set up API key
