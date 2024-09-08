@@ -1,9 +1,14 @@
 import os
 import google.generativeai as genai
+from dotenv import load_dotenv
+
+#loading env variables
+load_dotenv()
+API_KEY = os.getenv('API_KEY')
+
 
 # Set up API key
-api_key = "AIzaSyCWM6uLklxq5IsuPvFFpXgCd5bhyLsM44U"  # Replace with your actual API key
-genai.configure(api_key=api_key)
+genai.configure(api_key=API_KEY)
 
 def answer(question):
     # Define generation configuration
