@@ -1,6 +1,6 @@
 streamlit
-tensorflow==2.15.0
-tensorflow-estimator==2.15.0
+tensorflow==2.16.1
+tensorflow-estimator==2.16.1
 tensorboard==2.15.2
 matplotlib
 scikit-image
