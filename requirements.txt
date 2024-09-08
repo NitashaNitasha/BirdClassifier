@@ -4,3 +4,4 @@ pandas==2.2.2
 protobuf>=3.20.3,<4.21.0
 streamlit==1.38.0
 tensorflow==2.17.0
+google-generativeai==1.0.0
