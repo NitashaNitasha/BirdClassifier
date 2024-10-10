@@ -53,5 +53,5 @@ def dashboard():
 
 # Main function to run the dashboard
 if __name__ == "__main__":
-    dashboard()a
+    dashboard()
     #use streamlit run main.py to run
