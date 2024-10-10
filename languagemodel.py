@@ -7,7 +7,10 @@ from dotenv import load_dotenv
 load_dotenv()
 
 # Retrieve API key from Streamlit secrets or environment variables
-API_KEY = st.secrets.get('API_KEY') or os.getenv('API_KEY')
+try:
+    API_KEY = st.secrets.get('API_KEY')
+except FileNotFoundError:
+    API_KEY = os.getenv('API_KEY')
 
 # Set up API key
 if not API_KEY:
